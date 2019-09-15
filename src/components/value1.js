@@ -1,8 +1,8 @@
 import React, { useState, useImperativeHandle, forwardRef } from "react";
 import { Form, Input, Select, Upload, Icon, Modal } from "antd";
 import styles from "./value.less";
-import { getToken } from "utils/qiniu";
-import { valueOption1 } from "utils/options";
+import { getToken } from "utils/qiniu.js";
+import { valueOption1 } from "utils/options.js";
 
 // 七牛默认的上传地址
 const QINIU_SERVER = "http://upload.qiniup.com";
@@ -97,8 +97,6 @@ function ValueOne(props, ref) {
       return [error, value];
     }
   }));
-
-  // console.log(fileList);
 
   return (
     <div className={props.class}>

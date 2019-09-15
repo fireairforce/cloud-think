@@ -1,26 +1,26 @@
 import React, { Fragment, useRef, useState } from "react";
 // 组件
 import ValueOne from "components/value1";
-import ValueTwo from "components/value2";
-import ValueThree from "components/value3";
-import ValueFour from "components/value4";
-import ValueFive from "components/value5";
-import ValueSix from "components/value6";
-import ValueSeven from "components/value7";
+// import ValueTwo from "components/value2";
+// import ValueThree from "components/value3";
+// import ValueFour from "components/value4";
+// import ValueFive from "components/value5";
+// import ValueSix from "components/value6";
+// import ValueSeven from "components/value7";
 // 头部和底部
 import back from "assets/color.png";
 import { Button } from "antd";
 import styles from "./index.less";
 
-const componentMap = [
-  ValueOne,
-  ValueTwo,
-  ValueThree,
-  ValueFour,
-  ValueFive,
-  ValueSix,
-  ValueSeven
-];
+// const componentMap = [
+//   ValueOne,
+//   ValueTwo,
+//   ValueThree,
+//   ValueFour,
+//   ValueFive,
+//   ValueSix,
+//   ValueSeven
+// ];
 
 const ValueContent = [];
 
@@ -103,7 +103,8 @@ function Main() {
       </div>
       <div className={styles.content}>
         <div className={styles.bgc}></div>
-        {componentMap.map((FormItem, index) => {
+        <ValueOne />
+        {/* {componentMap.map((FormItem, index) => {
           return(
             <FormItem
                   key={`Value${index}`}
@@ -112,7 +113,7 @@ function Main() {
                   stepIndex={stepIndex === index ? index + 1 : ""}
                 />
           )
-        })}
+        })} */}
       </div>
       <div className={styles.footer}>
         {stepIndex === 0 ? (
