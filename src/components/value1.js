@@ -1,7 +1,7 @@
 import React, { useState, useImperativeHandle, forwardRef } from "react";
 import { Form, Input, Select, Upload, Icon, Modal } from "antd";
 import styles from "./value.less";
-import { getToken } from "utils/qiniu.js";
+// import { getToken } from "utils/qiniu.js";
 import { valueOption1 } from "utils/options.js";
 
 // 七牛默认的上传地址
@@ -58,10 +58,10 @@ function ValueOne(props, ref) {
       setFileList([...fileList]);
    
   };
-  const getUploadToken = () => {
-    const token = getToken();
-    setToken(token);
-  };
+  // const getUploadToken = () => {
+  //   const token = getToken();
+  //   setToken(token);
+  // };
 
   const uploadButton = (
     <div>
@@ -157,7 +157,7 @@ function ValueOne(props, ref) {
                   action={QINIU_SERVER}
                   data={{ token }}
                   listType="picture-card"
-                  beforeUpload={getUploadToken}
+                  // beforeUpload={getUploadToken}
                   fileList={fileList}
                   onPreview={handlePreview}
                   onChange={handleChange}
